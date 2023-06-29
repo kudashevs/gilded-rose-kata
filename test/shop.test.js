@@ -132,6 +132,16 @@ describe('Gilded Rose', () => {
     expect(shop.items[0].quality).toEqual(7);
   });
 
+  it('can increase twice the quality of Backstage passes to a TAFKAL80ETC concert when more than 5 days', () => {
+    let normal = new Item('Backstage passes to a TAFKAL80ETC concert', 6, 49);
+    let shop = new Shop([normal]);
+    shop.updateQuality();
+
+    expect(shop.items[0].name).toEqual('Backstage passes to a TAFKAL80ETC concert')
+    expect(shop.items[0].sellIn).toEqual(5);
+    expect(shop.items[0].quality).toEqual(50);
+  });
+
   it('can increase thrice the quality of Backstage passes to a TAFKAL80ETC concert when equal 5 days', () => {
     let normal = new Item('Backstage passes to a TAFKAL80ETC concert', 5, 5);
     let shop = new Shop([normal]);
@@ -140,6 +150,16 @@ describe('Gilded Rose', () => {
     expect(shop.items[0].name).toEqual('Backstage passes to a TAFKAL80ETC concert')
     expect(shop.items[0].sellIn).toEqual(4);
     expect(shop.items[0].quality).toEqual(8);
+  });
+
+  it('can increase twice the quality of Backstage passes to a TAFKAL80ETC concert when less than 5 days', () => {
+    let normal = new Item('Backstage passes to a TAFKAL80ETC concert', 4, 49);
+    let shop = new Shop([normal]);
+    shop.updateQuality();
+
+    expect(shop.items[0].name).toEqual('Backstage passes to a TAFKAL80ETC concert')
+    expect(shop.items[0].sellIn).toEqual(3);
+    expect(shop.items[0].quality).toEqual(50);
   });
 
   it('can increase thrice the quality of Backstage passes to a TAFKAL80ETC concert when less than 5 days', () => {
