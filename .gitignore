@@ -1,6 +1,11 @@
-dist
-node_modules
-coverage
-reports
-.idea
+/.idea
+/.vscode
+/coverage
+/dist
+/node_modules
+/reports
 *.iml
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
