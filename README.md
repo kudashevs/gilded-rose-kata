@@ -1,3 +1,7 @@
+# The Gilded Rose kata
+
+This is a solution of [the Gilded Rose Kata with mutation testing](https://github.com/trikitrok/mutant_gilded_rose) written in JavaScript.
+
 Goals
 ======================================
 Add the new requirement, the item "Conjured" in a difficult to maintain code.
